@@ -4,7 +4,7 @@ import MySQLdb, re
 
 app = Flask(__name__)
 
-db = MySQLdb.connect("localhost", "root", "1********", "ExploreSL")
+db = MySQLdb.connect("localhost", "root", "password", "db_name")
 
 @app.route('/api/v1.0/all', methods=['GET'])
 def all():
@@ -17,7 +17,7 @@ def all():
 def get_hotels():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -45,7 +45,7 @@ def get_hotels():
 def get_casino():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -72,7 +72,7 @@ def get_casino():
 def get_gh():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -99,7 +99,7 @@ def get_gh():
 def get_nightclubs():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -126,7 +126,7 @@ def get_nightclubs():
 def get_rest():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -153,7 +153,7 @@ def get_rest():
 def get_lodges():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -180,7 +180,7 @@ def get_lodges():
 def get_snacks():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -207,7 +207,7 @@ def get_snacks():
 def get_dev():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -235,7 +235,7 @@ def get_dev():
 def get_landm():
 	response = []
 	
-	db = MySQLdb.connect("localhost", "root", "***REMOVED***", "ExploreSL")
+	db = MySQLdb.connect("localhost", "root", "10041992", "ExploreSL")
 
 	curs = db.cursor()
 	try:
@@ -256,4 +256,4 @@ def not_found(error):
     return make_response(jsonify({'response': 'failed'}), 404)
 
 if __name__ == '__main__':
-    app.run(debug=True, port=***REMOVED***, host="***REMOVED***")
+    app.run(debug=True, port=81, host="10.0.0.167")
